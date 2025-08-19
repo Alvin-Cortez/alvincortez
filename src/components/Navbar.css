@@ -28,24 +28,33 @@ nav.navbar {
 
 .nav-links {
     display: flex;
-    list-style: none;
     gap: 1rem;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li a {
+.nav-btn {
+    border: none;
+    color: #222;
+    background-color: white;
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    color: #666666;
+}
+
+.nav-btn.active {
+    text-decoration: underline;
+}
+
+.nav-btn {
     text-decoration: none;
     color: #222;
     font-size: 1.3rem;
     padding: 0.5rem 0.75rem;
     border-radius: 8px;
     transition: background 0.2s, color 0.2s;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #666666
 }
 
 .nav-actions {

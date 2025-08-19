@@ -1,18 +1,23 @@
 import './Navbar.css'
 
 const Navbar = () => {
+
+    const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
             <nav className="navbar">
                 <div className="nav-container">
                     <div className="logo">AC</div>
-                    <ul className="nav-links">
-                        <li><a className="active" href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <div className="nav-links">
+                        <button className="nav-btn active" onClick={() => scrollToSection('home')}>Home</button>
+                        <button className="nav-btn" onClick={() => scrollToSection('about')}>About</button>
+                        <button className="nav-btn" onClick={() => scrollToSection('skills')}>Skills</button>
+                        <button className="nav-btn" onClick={() => scrollToSection('projects')}>Projects</button>
+                        <button className="nav-btn" onClick={() => scrollToSection('contact')}>Contact</button>
+                    </div>
                     <div className="nav-actions">
                         <button className="resume-btn">Download CV</button>
                         <button className="theme-toggle" aria-label="Toggle dark mode">
